@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>subida</title>
+</head>
+<body>
+<h1>FORMULARIO SUBIDA</h1>
+
+<form enctype="multipart/form-data" action="404subida.php" method="POST">
+    Archivo: <input name="archivoEnviado" type="file">
+    <p>
+    <label for="anchura">Anchura</label>
+    <input type="number" id="anchura" name="anchura" >
+    </p>
+    <p>
+        <label for="altura">Altura</label>
+        <input type="number" id="altura" name="altura" >
+    </p>
+    <input type="submit"  name="btnSubir" value="Subir" >
+</form>
+</body>
+</html>
