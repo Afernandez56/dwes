@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formularioCursos</title>
+</head>
+<body>
+
+
+<!--  inscripción a un curso con nombre, email, edad (number, de 16 a 99), modalidad (radio: presencial u online), turnos (checkboxes, mínimo 3 valores) y nivel (select simple). Valida en HTML y en PHP, repinta con los datos escritos si hay errores y muestra una tabla resumen si todo es correcto.-->
+
+
+<form action="601registroCursos.php" method="POST">
+    <p>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    </p>
+    <p>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+    </p>
+    <p>
+        <label for="edad">Edad</label>
+    <input type="number" name="edad" id="edad" min="16" max="99">
+    </p>
+    <p>
+    <input type="radio" name="modalidad" id="presencial" value="presencial">
+        <label for="presencial">Presencial</label>
+
+    <input type="radio" name="modalidad" id="online" value="online">
+        <label for="online">Online</label>
+    </p>
+    <p>
+    <input type="checkbox" name="turnos[]" id="mañana" value="mañana">
+        <label for="mañana">Mañana</label>
+
+    <input type="checkbox" name="turnos[]" id="tarde" value="tarde">
+        <label for="tarde">Tarde</label>
+
+    <input type="checkbox" name="turnos[]" id="noche" value="noche">
+        <label for="noche">Noche</label>
+    </p>
+    <p>
+        <label for="nivel">Selecciona tu nivel de inglés</label><br>
+        <select name="nivel" id="nivel">
+            <option value="basico"  >Básico</option>
+            <option value="medio"  >Intermedio</option>
+            <option value="avanzado"  >Avanzado</option>
+        </select>
+    </p>
+
+    <button type="submit" name="boton">Enviar</button>
+</form>
+
+
+</body>
+</html>

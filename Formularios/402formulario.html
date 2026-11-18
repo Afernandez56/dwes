@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>402formulario</title>
+</head>
+<body>
+<form action="403validacion.php" method="POST">
+
+    <p>
+        <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" name="nombre" id="nombre" required/>
+    </p>
+
+    <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required/>
+    </p>
+
+    <p>
+        <label for="url">URL página personal:</label>
+        <input type="url" name="url" id="url" required/>
+    </p>
+
+    <p>
+        <span>Sexo:</span><br>
+        <input type="radio" name="sexo" id="sexoH" value="hombre" required/>
+        <label for="sexoH">Hombre</label>
+
+        <input type="radio" name="sexo" id="sexoM" value="mujer" required/>
+        <label for="sexoM">Mujer</label>
+
+        <input type="radio" name="sexo" id="sexoO" value="otro" required/>
+        <label for="sexoO">Otro</label>
+    </p>
+
+    <p>
+        <label for="convivientes">Número de convivientes en el domicilio:</label>
+        <input type="number" name="convivientes" id="convivientes" min="0" required/>
+    </p>
+
+    <p>
+        <span>Aficiones:</span><br>
+        <input type="checkbox" name="aficiones[]" id="aficionLectura" value="lectura" />
+        <label for="aficionLectura">Lectura</label><br>
+
+        <input type="checkbox" name="aficiones[]" id="aficionDeporte" value="deporte" />
+        <label for="aficionDeporte">Deporte</label><br>
+
+        <input type="checkbox" name="aficiones[]" id="aficionCine" value="cine"/>
+        <label for="aficionCine">Cine</label><br>
+
+        <input type="checkbox" name="aficiones[]" id="aficionMusica" value="musica" />
+        <label for="aficionMusica">Música</label>
+    </p>
+
+    <p>
+        <label for="menu">Menú favorito (mantén Ctrl o Cmd para elegir varios):</label><br>
+        <select name="menu[]" id="menu" multiple size="4" required>
+            <option value="paella">Paella</option>
+            <option value="tortilla">Tortilla de patatas</option>
+            <option value="pasta">Pasta carbonara</option>
+            <option value="ensalada">Ensalada César</option>
+        </select>
+    </p>
+
+    <input type="submit" value="Enviar" name="enviar" />
+
+
+
+</form>
+</body>
+</html>
